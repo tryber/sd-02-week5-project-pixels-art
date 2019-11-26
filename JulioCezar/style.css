@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 30px;
+}
+
+.div_color_pallet {
+    border-style: solid;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+#black {
+    background-color: black;
+}
+
+#green {
+    background-color: green;
+}
+
+#red {
+    background-color: red;
+}
+
+#purple {
+    background-color: purple;
+}
+
+#quadrado_grande_div {
+    width: 200px;
+    height: 200px;
+    border: solid 1px;
+}
+
+#quadradoLinha {
+    width: auto;
+    height: 40px;
+    border: solid 1px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+
+.pixel_l1 {
+    border: solid;
+}
