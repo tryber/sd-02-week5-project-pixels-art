@@ -49,10 +49,20 @@ function mudarTamanho() {
 }
 
 function gitHub() {
-    let total = document.querySelectorAll('.colorivel').length;
-    for (let i = 0; i < total; i++) {
-        document.getElementsByClassName('colorivel')[i].value = Math.floor(Math.random() * 10) + 1;
-        if (document.getElementsByClassName('colorivel')[i].value%2 == 0) {document.getElementsByClassName('colorivel')[i].style.backgroundColor = 'white'}
-        else {document.getElementsByClassName('colorivel')[i].style.backgroundColor = color}
+    let totalQuadrados = document.querySelectorAll('.colorivel').length;
+    let totalLinha = Math.sqrt(totalQuadrados);
+
+    for (let j = 0; j < totalLinha; j++) {
+        for (let i = 0; i < totalLinha / 2; i++) {
+            document.getElementsByClassName('colorivel')[i + totalLinha * j].value = Math.floor(Math.random() * 10) + 1;
+            if (document.getElementsByClassName('colorivel')[i + totalLinha * j].value % 2 == 0) {
+                document.getElementsByClassName('colorivel')[i + totalLinha * j].style.backgroundColor = 'white'
+                document.getElementsByClassName('colorivel')[(totalLinha * (j + 1) - 1) - i].style.backgroundColor = 'white'
+            }
+            else {
+                document.getElementsByClassName('colorivel')[i + totalLinha * j].style.backgroundColor = color;
+                document.getElementsByClassName('colorivel')[(totalLinha * (j + 1) - 1) - i].style.backgroundColor = color;
+            }
+        }
     }
 }
