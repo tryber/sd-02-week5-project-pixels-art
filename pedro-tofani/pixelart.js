@@ -12,5 +12,9 @@ for (let i = 0; i < 4; i++) {
         ponteiroCor.style.border = 'red solid 3px';
         color = ponteiroCor.id;
     })
-
 }
+document.querySelector('#bordaMatriz').addEventListener('click', colorir)
+
+function colorir (event) {  
+    event.target.style.backgroundColor = color;
+  }
