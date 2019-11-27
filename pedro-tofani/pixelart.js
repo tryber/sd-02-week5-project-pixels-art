@@ -13,8 +13,14 @@ for (let i = 0; i < 4; i++) {
         color = ponteiroCor.id;
     })
 }
-document.querySelector('#bordaMatriz').addEventListener('click', colorir)
+document.querySelector('#bordaMatriz').addEventListener('click', colorir);
+document.getElementById('clear').addEventListener('click', clear);
 
-function colorir (event) {  
+function colorir(event) {
     event.target.style.backgroundColor = color;
-  }
+}
+function clear() {
+    for (let i = 0; i < 25; i++) {
+        document.getElementsByClassName('colorivel')[i].style.backgroundColor = 'white'
+    }
+}
