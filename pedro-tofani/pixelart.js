@@ -15,12 +15,33 @@ for (let i = 0; i < 4; i++) {
 }
 document.querySelector('#bordaMatriz').addEventListener('click', colorir);
 document.getElementById('clear').addEventListener('click', clear);
+document.getElementById('tamanho').addEventListener('change', clear);
+document.getElementById('tamanho').addEventListener('change', mudarTamanho);
+let grid = document.getElementById('bordaMatriz');
 
 function colorir(event) {
     event.target.style.backgroundColor = color;
 }
 function clear() {
-    for (let i = 0; i < 25; i++) {
+    let total = document.querySelectorAll('.colorivel').length
+    for (let i = 0; i < total; i++) {
         document.getElementsByClassName('colorivel')[i].style.backgroundColor = 'white'
+    }
+}
+function mudarTamanho() {
+    let valorComprimento = this.value;
+    grid.innerHTML = '';
+    grid.style.width = valorComprimento * 40;
+    grid.style.height = valorComprimento * 40;
+    grid.style.gridTemplateColumns = '';
+    grid.style.gridTemplateRows = '';
+    for (let i = 0; i < valorComprimento; i++) {
+        grid.style.gridTemplateColumns += ' 40px';
+        grid.style.gridTemplateRows += ' 40px';
+        for (let j = 0; j < valorComprimento; j++) {
+            let quadradinho = document.createElement("div");
+            quadradinho.className = 'colorivel';
+            document.getElementById("bordaMatriz").appendChild(quadradinho);
+        }
     }
 }
