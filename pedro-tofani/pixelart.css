@@ -10,7 +10,7 @@ header {
     display: inline-flex;
 }
 
-#cor1 {
+#black {
     height: 50px;
     background-color: black;
     width: 50px;
@@ -18,7 +18,7 @@ header {
     border: solid white;
 }
 
-#cor2 {
+#blue {
     height: 50px;
     background-color: blue;
     width: 50px;
@@ -26,7 +26,7 @@ header {
     border: solid white;
 }
 
-#cor3 {
+#green {
     height: 50px;
     background-color: green;
     width: 50px;
@@ -34,7 +34,7 @@ header {
     border: solid white;
 }
 
-#cor4 {
+#yellow {
     height: 50px;
     background-color: yellow;
     width: 50px;
