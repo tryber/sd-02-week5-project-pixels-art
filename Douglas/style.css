@@ -1,38 +1,36 @@
 td {
-
   padding: 0;
 }
-.escolha {
 
+.escolha {
   width: 50px;
   height: 50px;
 }
 
 .quadrado {
-
   width: 50px;
   height: 50px;
 
 }
-.tabela {
 
+.tabela {
   border-collapse: collapse;
   border-spacing: 0;
   margin: auto;
 }
-#preto {
 
+#preto {
   background-color: black;
 }
-#azul {
 
+#azul {
   background-color: blue;
 }
-#amarelo {
 
+#amarelo {
   background-color: yellow;
 }
-#rosa {
 
+#rosa {
   background-color: pink;
 }
