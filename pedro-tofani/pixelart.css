@@ -66,6 +66,8 @@ header {
     height: 210px;
     width: 210px;
     padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+    display: grid;
+    justify-content: center;
 }
