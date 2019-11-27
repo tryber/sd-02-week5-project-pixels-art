@@ -26,20 +26,14 @@ body {
     background-color: purple;
 }
 
-#quadrado_grande_div {
+.grid_container {
     width: 200px;
-    height: 200px;
-    border: solid 1px;
+    height: 200px;    
+    grid-template-columns: 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+    display: grid;
 }
 
-#quadradoLinha {
-    width: auto;
-    height: 40px;
-    border: solid 1px;
-    margin-top: -2px;
-    margin-bottom: -2px;
-}
-
-.pixel_l1 {
-    border: solid;
+.pixels {
+    border: 1px solid;    
 }
