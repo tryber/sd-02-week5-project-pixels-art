@@ -2,6 +2,7 @@
 window.onload = function () {
 }
 let color = 'black'
+let grid = document.getElementById('bordaMatriz');
 for (let i = 0; i < 4; i++) {
     let ponteiroCor = document.getElementsByClassName('corSelecionada')[i];
     ponteiroCor.addEventListener('click', function () {
@@ -17,7 +18,8 @@ document.querySelector('#bordaMatriz').addEventListener('click', colorir);
 document.getElementById('clear').addEventListener('click', clear);
 document.getElementById('tamanho').addEventListener('change', clear);
 document.getElementById('tamanho').addEventListener('change', mudarTamanho);
-let grid = document.getElementById('bordaMatriz');
+document.getElementById('gitHub').addEventListener('click', gitHub);
+
 
 function colorir(event) {
     event.target.style.backgroundColor = color;
@@ -43,5 +45,14 @@ function mudarTamanho() {
             quadradinho.className = 'colorivel';
             document.getElementById("bordaMatriz").appendChild(quadradinho);
         }
+    }
+}
+
+function gitHub() {
+    let total = document.querySelectorAll('.colorivel').length;
+    for (let i = 0; i < total; i++) {
+        document.getElementsByClassName('colorivel')[i].value = Math.floor(Math.random() * 10) + 1;
+        if (document.getElementsByClassName('colorivel')[i].value%2 == 0) {document.getElementsByClassName('colorivel')[i].style.backgroundColor = 'white'}
+        else {document.getElementsByClassName('colorivel')[i].style.backgroundColor = color}
     }
 }
