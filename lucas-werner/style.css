@@ -1,0 +1,49 @@
+body {
+    background-color: cornsilk;
+}
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.paleta-de-cores{
+    padding: 10px;
+}
+.quadrado {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+#cor1 {
+    background-color: black;
+}
+#cor2 {
+    background-color:rgb(206, 97, 97);
+}
+#cor3 {
+    background-color: rgb(19, 133, 148);
+}
+#cor4 {
+    background-color: rgb(27, 99, 27);
+}
+.paleta-de-cores {
+    display: flex;
+    justify-content: center;
+}
+.grid {
+    display: grid;
+    justify-content: center;
+	grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    border: solid 1px black;
+    width: 300px;
+    height: 300px;
+}
+.pixel {
+    border: 1px solid;
+    background-color: white;
+}
+
+#grid-container {
+    display: flex;
+    justify-content: center;
+}
