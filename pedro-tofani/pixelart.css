@@ -6,6 +6,20 @@ header {
     text-align: center;
 }
 
+.bigBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.colorivel {
+    margin: 0px;
+    padding: 0px;
+    border: solid black 1px;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+}
+
 #coresSelecionaveis {
     display: inline-flex;
 }
@@ -42,6 +56,16 @@ header {
     border: solid white;
 }
 
-#conteudo{
+#conteudo {
     text-align: center;
+}
+
+#bordaMatriz {
+    margin: 5px;
+    border: solid black;
+    height: 210px;
+    width: 210px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
