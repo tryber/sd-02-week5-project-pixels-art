@@ -1,23 +1,27 @@
-const localClicado= document.querySelector('.colorir');
-localClicado.addEventListener('mousedown',function(){
+/*global document:true*/
+/*global someFunction event:true*/
+
+const localClicado = document.querySelector ('.colorir');
+localClicado.addEventListener ('mousedown', function () {
   console.log(event.target);
 });
-const selecionaCor= document.querySelector('.escolhas');
+const selecionaCor = document.querySelector ('.escolhas');
+let cor = 'black';
+selecionaCor.addEventListener ('mousedown', function () {
+  cor = qualACor();
+});
 
-let cor;
-(selecionaCor.addEventListener('mousedown',function(){
-  cor= qualACor();
-}))
-
-function qualACor(){
+function qualACor () {
   switch (event.target.id){
     case 'preto':
       return 'black';
     case 'azul':
-      return'blue'
+      return 'blue'
     case 'amarelo':
-      return'yellow';
+      return 'yellow';
     case 'rosa':
       return 'pink';
+    default:
+      return 'black';
   }
 }
