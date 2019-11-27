@@ -1,0 +1,1 @@
+let cor1 = document.getElementsByClassName('quadrado')
