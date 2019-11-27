@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(226, 215, 215);
+}
+
+header {
+    text-align: center;
+}
+
+#coresSelecionaveis {
+    display: inline-flex;
+}
+
+#cor1 {
+    height: 50px;
+    background-color: black;
+    width: 50px;
+    margin: 10px;
+    border: solid white;
+}
+
+#cor2 {
+    height: 50px;
+    background-color: blue;
+    width: 50px;
+    margin: 10px;
+    border: solid white;
+}
+
+#cor3 {
+    height: 50px;
+    background-color: green;
+    width: 50px;
+    margin: 10px;
+    border: solid white;
+}
+
+#cor4 {
+    height: 50px;
+    background-color: yellow;
+    width: 50px;
+    margin: 10px;
+    border: solid white;
+}
+
+#conteudo{
+    text-align: center;
+}
