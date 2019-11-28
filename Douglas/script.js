@@ -84,27 +84,50 @@ localClicado.addEventListener ('mouseup', function () {
 });
 const selecionaCor = document.querySelector ('.escolhas');
 
+const guardaCor= [];
 
 selecionaCor.addEventListener ('mouseup', function () {
   cor = qualACor();
   escolha.style.backgroundColor= cor;
 });
-
+window.onload= function(){
+  this.trocaCor();
+}
+function trocaCor(){
+  const cores = [];
+  cores[0] = document.getElementById('preto');
+  cores[1] = document.getElementById('azul');
+  cores[2] = document.getElementById('amarelo');
+  cores[3] = document.getElementById('rosa');
+  cores[4] = document.getElementById('verde');
+  cores[5] = document.getElementById('branco');
+  for(let i = 0 ; i <= 5 ; i++ ){
+    guardaCor[i]= geraCor();
+    cores[i].style.backgroundColor= guardaCor[i];
+  }
+}
+function geraCor(){
+  const hexadecimais = '0123456789ABCDEF';
+  let cor1 = '#';
+  for (let i = 0; i < 6; i++ ) {
+      cor1 += hexadecimais[Math.floor(Math.random() * 16)];
+  }
+  return cor1;
+}
 function qualACor () {
   switch (event.target.id){
     case 'preto':
-      event.target.style.borderColor= 'green';
-      return 'black';
+      return guardaCor[0];
     case 'azul':
-      return 'blue'
+      return guardaCor[1];
     case 'amarelo':
-      return 'yellow';
+      return guardaCor[2];
     case 'rosa':
-      return 'pink';
+      return guardaCor[3];
     case 'verde':
-      return 'green';
+      return guardaCor[4];
     case 'branco':
-      return 'white';
+      return guardaCor[5];
     default:
       return 'black';
   }
