@@ -8,28 +8,30 @@ header {
 .paleta-de-cores{
     padding: 10px;
 }
-.quadrado {
+.tinta {
     width: 60px;
     height: 60px;
     margin: 10px;
+    border: solid white;
 }
-#cor1 {
+#black {
     background-color: black;
+    border: solid red;
 }
-#cor2 {
+#red {
     background-color:rgb(206, 97, 97);
 }
-#cor3 {
+#blue {
     background-color: rgb(19, 133, 148);
 }
-#cor4 {
+#green {
     background-color: rgb(27, 99, 27);
 }
 .paleta-de-cores {
     display: flex;
     justify-content: center;
 }
-.grid {
+#grid {
     display: grid;
     justify-content: center;
 	grid-template-columns: 40px 40px 40px 40px 40px;
