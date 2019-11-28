@@ -23,7 +23,7 @@
   }
   .grid-paleta{
     display: inline-grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(5, auto);
     grid-column-gap: 15px;
   }
   .paleta {
@@ -47,6 +47,7 @@
 }
 
 .conjunto-pixels {
+    margin-top: 35px;
     display: inline-grid;
     grid-template-columns: repeat(5, auto);
 }
