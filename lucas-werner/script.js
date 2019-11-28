@@ -8,7 +8,7 @@ let corSelecionada = document.getElementsByClassName('tinta')[i];
             let limparBordas = document.getElementsByClassName('tinta')[j];
             limparBordas.style.border = 'white solid';
         }
-        corSelecionada.style.border = 'red solid 3px'; // colorir a que foi selecionada
+        corSelecionada.style.border = 'red solid 3px'; // colorir a que foi selecionada, após ter limpado
         color = corSelecionada.id;
     })
 }
@@ -24,19 +24,36 @@ let clear = document.getElementById('clear');
     clear.addEventListener('click', function() {
         let nPixel = document.getElementsByClassName('pixel').length;
         for (let i = 0; i < nPixel; i++){
-            let limpar = document.getElementsByClassName('pixel')[i]
+            let limpar = document.getElementsByClassName('pixel')[i];
             limpar.style.backgroundColor = 'white'}
         })
 
-// resize grid
+    let resize = document.getElementById('resize');
 
-let tamanho = document.getElementById('resize')
-    tamanho.addEventListener('change', function() {
-        if (tamanho.value < 5 || tamanho.value > 50) {
-            alert('Insira um valor entre 5 e 50!')
-            tamanho.value = " "
+    resize.addEventListener('change', function(){
+    if (resize.value < 5 || resize.value > 50) {
+    alert('Insira um valor entre 5 e 50!');
+    resize.value = " ";
+    } else {    
+        let tamanho = document.getElementById('resize').value
+        let grid = document.getElementById('grid');
+        grid.innerHTML = '';
+        grid.style.gridTemplateColumns = '';
+        grid.style.gridTemplateRows = '';
+        grid.style.width = tamanho * 40 + 'px';
+        grid.style.length = tamanho * 40 + 'px';
+            for (let i = 0; i < tamanho; i++){ //number of rows and columns
+            grid.style.gridTemplateColumns += ' 40px';
+            grid.style.gridTemplateRows += ' 40px';
+                for (let j = 0; j < tamanho; j++) {
+                let pixel = document.createElement('div'); 
+                pixel.className = 'pixel';
+                document.getElementById('grid').appendChild(pixel)
+                }    
+            }
         }
-    })
-
-
+    }
+)
+    
+        
     

@@ -5,7 +5,7 @@ header {
     text-align: center;
     margin-bottom: 50px;
 }
-.paleta-de-cores{
+.paletaDeCores{
     padding: 10px;
 }
 .tinta {
@@ -27,7 +27,7 @@ header {
 #green {
     background-color: rgb(27, 99, 27);
 }
-.paleta-de-cores {
+.paletaDeCores {
     display: flex;
     justify-content: center;
 }
@@ -36,20 +36,20 @@ header {
     justify-content: center;
 	grid-template-columns: 40px 40px 40px 40px 40px;
     grid-template-rows: 40px 40px 40px 40px 40px;
-    border: solid 1px black;
     width: 200px;
     height: 200px;
+    border: 1px solid;
 }
 .pixel {
     border: 1px solid;
     background-color: white;
 }
 
-#grid-container {
+#gridContainer {
     display: flex;
     justify-content: center;
 }
-#button-box {
+#buttonBox {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
@@ -57,7 +57,7 @@ header {
 .button {
     margin: 10px;
 }
-#resize-container {
+#resizeContainer {
     display: flex;
     justify-content: center;
     padding: 10px;
