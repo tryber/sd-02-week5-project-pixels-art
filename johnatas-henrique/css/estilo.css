@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @font-face {
+    font-family: animeace;
+    src: url( '../fonts/animeace2_reg.ttf' );
+  }
+  
+  @font-face {
+    font-family: animeace;
+    src: url( '../fonts/animeace2_bld.ttf' );
+    font-weight: 700;
+  }
+  
+  body {
+    font-family: animeace , sans-serif;
+  }
+  
+  .title-paleta {
+      text-align: center;
+  }
+  .grid-paleta{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 15px;
+  }
+  .paleta {
+      border: 1px solid black;
+      height: 50px;
+      width: 50px;
+  }
+
+  .black {
+      background-color: black;
+  }
+
+  .red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+
+.conjunto-pixels {
+    display: inline-grid;
+    grid-template-columns: repeat(5, auto);
+}
+.pixels{
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+}
+
+.teste-class {
+    background-color: purple;
+}
