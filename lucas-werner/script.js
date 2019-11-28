@@ -17,3 +17,15 @@ document.getElementById('grid').addEventListener('click', colorir);
 
 function colorir(event) {
     event.target.style.backgroundColor = color }
+
+//limpar
+
+let clear = document.getElementById('clear');
+    clear.addEventListener('click', function() {
+        let nPixel = document.getElementsByClassName('pixel').length;
+        for (let i = 0; i < nPixel; i++){
+            let limpar = document.getElementsByClassName('pixel')[i]
+            limpar.style.backgroundColor = 'white'}
+        })
+
+//

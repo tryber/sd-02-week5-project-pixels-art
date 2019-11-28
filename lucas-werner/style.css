@@ -11,7 +11,7 @@ header {
 .tinta {
     width: 60px;
     height: 60px;
-    margin: 10px;
+    margin: 5px;
     border: solid white;
 }
 #black {
@@ -48,4 +48,17 @@ header {
 #grid-container {
     display: flex;
     justify-content: center;
+}
+#button-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.button {
+    margin: 10px;
+}
+#resize-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
