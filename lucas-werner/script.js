@@ -28,4 +28,15 @@ let clear = document.getElementById('clear');
             limpar.style.backgroundColor = 'white'}
         })
 
-//
+// resize grid
+
+let tamanho = document.getElementById('resize')
+    tamanho.addEventListener('change', function() {
+        if (tamanho.value < 5 || tamanho.value > 50) {
+            alert('Insira um valor entre 5 e 50!')
+            tamanho.value = " "
+        }
+    })
+
+
+    
