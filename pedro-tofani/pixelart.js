@@ -1,5 +1,22 @@
 
 window.onload = function () {
+    let arranjoCores1 = [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256)];
+    let arranjoCores2 = [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256)];
+    let arranjoCores3 = [Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256)];
+    let corRandom1 = 'rgb(' + arranjoCores1[0] + ', ' + arranjoCores1[1] + ', ' + arranjoCores1[2] + ')';
+    let corRandom2 = 'rgb(' + arranjoCores2[0] + ', ' + arranjoCores2[1] + ', ' + arranjoCores2[2] + ')';
+    let corRandom3 = 'rgb(' + arranjoCores3[0] + ', ' + arranjoCores3[1] + ', ' + arranjoCores3[2] + ')';
+    document.getElementById('black').value = 'black';
+    let ponteiroCorRandom1 = document.getElementById('cor1');
+    ponteiroCorRandom1.value = corRandom1;
+    ponteiroCorRandom1.style.backgroundColor = corRandom1;
+    let ponteiroCorRandom2 = document.getElementById('cor2');
+    ponteiroCorRandom2.value = corRandom2;
+    ponteiroCorRandom2.style.backgroundColor = corRandom2;
+    let ponteiroCorRandom3 = document.getElementById('cor3')
+    ponteiroCorRandom3.value = corRandom3;
+    ponteiroCorRandom3.style.backgroundColor = corRandom3;
+
 }
 let color = 'black'
 let grid = document.getElementById('bordaMatriz');
@@ -11,7 +28,7 @@ for (let i = 0; i < 4; i++) {
             zerarBorda.style.border = 'white solid';
         }
         ponteiroCor.style.border = 'red solid 3px';
-        color = ponteiroCor.id;
+        color = ponteiroCor.value;
     })
 }
 document.querySelector('#bordaMatriz').addEventListener('click', colorir);

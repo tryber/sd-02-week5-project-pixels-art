@@ -32,25 +32,22 @@ header {
     border: solid white;
 }
 
-#blue {
+#cor1 {
     height: 50px;
-    background-color: blue;
     width: 50px;
     margin: 10px;
     border: solid white;
 }
 
-#green {
+#cor2 {
     height: 50px;
-    background-color: green;
     width: 50px;
     margin: 10px;
     border: solid white;
 }
 
-#yellow {
+#cor3 {
     height: 50px;
-    background-color: yellow;
     width: 50px;
     margin: 10px;
     border: solid white;
