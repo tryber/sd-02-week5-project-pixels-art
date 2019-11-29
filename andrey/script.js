@@ -28,8 +28,8 @@ function criarTemplate(N) {
   template.style.gridTemplateRows = `repeat(${N}, 40px)`;
   template.style.gridTemplateColumns = `repeat(${N}, 40px)`;
 
-  for (let i = 0; i < N * N ;i += 1) {
-    let div = document.createElement('div');
+  for (let i = 0; i < N * N; i += 1) {
+    const div = document.createElement('div');
     div.setAttribute('class', 'white');
     template.appendChild(div);
 
@@ -58,9 +58,25 @@ function criarCores() {
   black.style.backgroundColor = 'rgb(0, 0, 0)';
 }
 
+function a(item) {
+  item.style.backgroundColor = escolhido.style.backgroundColor
+}
+
+function b(item) {
+  item.style.backgroundColor = '#f0f0f0'
+}
+
 function gerarIdenticon(array) {
+  let index = 0;
+
   deleteTemplate();
   criarTemplate(5);
+
+  template.querySelectorAll('div')
+  .forEach((item) => {
+    array[index] ? a(item) : b(item);
+    index += 1;
+  });
 }
 
 function gerarIdentions() {
@@ -86,21 +102,6 @@ function gerarIdentions() {
     });
   });
 }
-function a() {
-  item.style.backgroundColor = escolhido.style.backgroundColor
-}
-
-function b() {
-  item.style.backgroundColor = '#f0f0f0'
-}
-
-let index = 0;
-
-template.querySelectorAll('div')
-  .forEach(() => {
-    array[index] ? a() : b();
-    index += 1;
-  });
 
 paleta.forEach((elem) => {
   elem.addEventListener('click', (e) => {
