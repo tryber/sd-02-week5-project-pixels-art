@@ -4,6 +4,7 @@ const containerCaixa = document.querySelector('.conjunto-pixels');
 const limpaTudo = document.querySelector('.borracha');
 let corAtual = 'black';
 let itemPixel;
+let evento;
 /* Escolhendo a cor */
 
 function selecionaCor(event) {
