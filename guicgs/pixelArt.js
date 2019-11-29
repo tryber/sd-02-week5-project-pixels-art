@@ -1,15 +1,15 @@
-let paletaCor = document.getElementsByClassName("quadradoPaleta");
+const paletaCor = document.getElementsByClassName('quadradoPaleta');
 let corSelecionada = paletaCor[0].style.backgroundColor;
-for (let element of paletaCor) {
-  element.addEventListener('click', cliquePaleta);
-  let quadradosVazios = document.getElementsByClassName("quadradoLinha");
-  for (let element of quadradosVazios) { 
-    element.addEventListener('click', cliquePixel);
-  }
-}
-function cliquePaleta () {
+function cliquePaleta() {
   corSelecionada = this.style.backgroundColor;
 }
-function cliquePixel () {
+function cliquePixel() {
   this.style.backgroundColor = corSelecionada;
+}
+for(const element of paletaCor) {
+  element.addEventListener('click', cliquePaleta);
+  const quadradosVazios = document.getElementsByClassName('quadradoLinha');
+  for(const element2 of quadradosVazios) { 
+    element.addEventListener('click', cliquePixel);
+  }
 }
