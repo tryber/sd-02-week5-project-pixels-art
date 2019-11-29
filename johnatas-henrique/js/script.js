@@ -1,27 +1,32 @@
 const containerPaleta = document.querySelector('.grid-paleta');
-const selecionado = document.querySelector('.selecionado');
+const selecionada = document.querySelector('.selecionada');
 const containerCaixa = document.querySelector('.conjunto-pixels');
-let corAtual = 'black';
 const limpaTudo = document.querySelector('.borracha');
+let corAtual = 'black';
+let itemPixel;
 /* Escolhendo a cor */
 
 function selecionaCor(event) {
-  selecionado.className = `paleta ${event.target.classList[1]}`;
+  selecionada.className = `paleta ${event.target.classList[1]}`;
   corAtual = event.target.classList[1];
 }
 
 function paletaLoop(itemPaleta) {
-  itemPaleta.addEventListener('click', selecionaCor)
+  itemPaleta.addEventListener('click', selecionaCor);
 }
 
 containerPaleta.querySelectorAll('div').forEach(paletaLoop);
 
 /* Pintando as caixas */
 
+function trocaClassCaixa(event) {
+  event.target.className = `pixels ${corAtual}`;
+  console.log(event);
+}
+
 function pintarCaixa(itemPixels) {
-  itemPixels.addEventListener('click', function () {
-    itemPixels.className = `pixels ${corAtual}`;
-  });
+  itemPixel = itemPixels;
+  itemPixel.addEventListener('click', trocaClassCaixa);
 }
 
 containerCaixa.querySelectorAll('div').forEach(pintarCaixa);
@@ -29,8 +34,9 @@ containerCaixa.querySelectorAll('div').forEach(pintarCaixa);
 /* Botão apaga tudo */
 
 function limparCaixa(itemPixels) {
-  itemPixels.className = 'pixels white';
-  selecionado.className = 'paleta selecionado black';
+  itemPixel = itemPixels;
+  itemPixel.className = 'pixels white';
+  selecionada.className = 'paleta selecionada black';
   corAtual = 'black';
 }
 
