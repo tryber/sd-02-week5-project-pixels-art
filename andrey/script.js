@@ -10,7 +10,8 @@ const identicons = document.querySelectorAll('.identicons img');
 
 const paleta = [];
 
-paleta.push(white); paleta.push(black);
+paleta.push(white);
+paleta.push(black);
 
 random.forEach(elem => {
   paleta.push(elem);
@@ -21,7 +22,6 @@ clearBtn.addEventListener('click', () => {
     elem.style.backgroundColor = 'rgb(255,255,255)';
   });
 });
-
 
 
 function criarTemplate(N) {
@@ -61,9 +61,15 @@ function criarCores() {
 function gerarIdentions() {
   identicons.forEach((item) => {
     item.addEventListener('click', (e) => {
-      if (e.target.classList[0] == 'identicon1') { gerarIdenticon([0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0]); }
-      if (e.target.classList[0] == 'identicon2') { gerarIdenticon([0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1]); }
-      if (e.target.classList[0] == 'identicon3') { gerarIdenticon([1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1]); }
+      if (e.target.classList[0] == 'identicon1') {
+        gerarIdenticon([0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0]);
+      }
+      if (e.target.classList[0] == 'identicon2') {
+        gerarIdenticon([0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1]);
+      }
+      if (e.target.classList[0] == 'identicon3') {
+        gerarIdenticon([1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1]);
+      }
     });
   });
 }
