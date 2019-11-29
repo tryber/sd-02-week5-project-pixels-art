@@ -16,7 +16,7 @@ html , body , .grid , img {
 
 .paleta {
   display: grid;
-  grid-template-columns: 40px 50px repeat( 5, 40px );
+  grid-template-columns: 40px 50px repeat( 5 , 40px );
   grid-template-rows: 40px;
   margin: 20px;
 }

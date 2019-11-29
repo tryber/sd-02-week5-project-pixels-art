@@ -59,11 +59,11 @@ function criarCores() {
 }
 
 function a(item) {
-  item.style.backgroundColor = escolhido.style.backgroundColor
+  item.style.backgroundColor = escolhido.style.backgroundColor;
 }
 
 function b(item) {
-  item.style.backgroundColor = '#f0f0f0'
+  item.style.backgroundColor = '#f0f0f0';
 }
 
 function gerarIdenticon(array) {
