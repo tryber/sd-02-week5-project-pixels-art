@@ -1,4 +1,4 @@
-<script>
+
         //let arrayPixels = document.getElementsByTagName('td');
       //  let i = 0;
     //    if (i < arrayPixels.length) {
@@ -34,5 +34,3 @@
 
         //Vários quadrados, parâmetros da função, ordem de execução
         
-
-    </script>
