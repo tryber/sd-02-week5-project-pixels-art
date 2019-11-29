@@ -1,5 +1,5 @@
 * {
-  font-family: Ubuntu, sans-serif;
+  font-family: Ubuntu , sans-serif;
   margin: 0;
   box-sizing: border-box;
   text-align: center;
@@ -15,7 +15,7 @@
   border: 1px;
   border-style: solid;
   border-color: black;
-  display: inline-block; 
+  display: inline-block;
 }
 
 .quadro {
