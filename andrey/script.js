@@ -19,7 +19,8 @@ random.forEach((elem) => {
 
 clearBtn.addEventListener('click', () => {
   template.querySelectorAll('div').forEach((elem) => {
-    elem.style.backgroundColor = 'rgb(255,255,255)';
+    let elemento = elem;
+    elemento.style.backgroundColor = 'rgb(255,255,255)';
   });
 });
 
