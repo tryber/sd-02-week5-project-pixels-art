@@ -1,0 +1,47 @@
+<style>
+        #quadro td {
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            
+
+        }
+        #paleta td {
+            width: 40px;
+            height: 40px;
+            border: 3px solid black;
+            
+            
+        }
+        #quadro {
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+        /*.pixel {
+            width: 40px;
+            height: 40px;
+        }
+        #paleta p {
+            display: inline-block;
+            margin-right: 3px;
+            border: 3px solid black;
+
+        }
+        #quadro p {
+            display: inline-block;
+            margin: 0.2px;
+            border: 1px solid black;
+        }*/
+        .black {
+            background: black;
+        }
+        .red {
+            background: red;
+        }
+        .blue {
+            background: blue;
+        }
+        .green {
+            background: green;
+        }
+    </style>
