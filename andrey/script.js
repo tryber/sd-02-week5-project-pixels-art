@@ -28,8 +28,8 @@ function criarTemplate(N) {
   template.style.gridTemplateRows = `repeat(${N}, 40px)`;
   template.style.gridTemplateColumns = `repeat(${N}, 40px)`;
 
-  for (i=0; i<N*N ;i += 1) {
-    var div = document.createElement('div');
+  for (let i = 0; i < N * N ;i += 1) {
+    let div = document.createElement('div');
     div.setAttribute('class', 'white');
     template.appendChild(div);
 
@@ -47,31 +47,30 @@ function deleteTemplate() {
 
 function criarCores() {
   random.forEach((elem) => {
-    let x = Math.floor(Math.random() * 256);
-    let y = Math.floor(Math.random() * 256);
-    let z = Math.floor(Math.random() * 256);
-    let bgColor = 'rgb(' + x + ',' + y + ',' + z + ')';
+    const x = Math.floor(Math.random() * 256);
+    const y = Math.floor(Math.random() * 256);
+    const z = Math.floor(Math.random() * 256);
+    const bgColor = `rgb(${x},${y},${z})`;
     elem.style.backgroundColor = bgColor;
-  })
+  });
 
   white.style.backgroundColor = 'rgb(255, 255, 255)';
   black.style.backgroundColor = 'rgb(0, 0, 0)';
 }
 
 function gerarIdenticon(array) {
-  let index = 0;
   deleteTemplate();
   criarTemplate(5);
 }
 
 function gerarIdentions() {
-  let identicon1 = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0];
-  let identicon2 = [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1];
-  let identicon3 = [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1];
+  const identicon1 = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0];
+  const identicon2 = [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1];
+  const identicon3 = [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1];
 
   identicons.forEach((item) => {
     item.addEventListener('click', (e) => {
-      switch(e.target.classList[0]) {
+      switch (e.target.classList[0]) {
         case 'identicon1':
           gerarIdenticon(identicon1);
           break;
@@ -82,23 +81,25 @@ function gerarIdentions() {
           gerarIdenticon(identicon3);
           break;
         default:
-          console.log("errou")
+          console.log('errou');
       }
     });
   });
 }
-function a(){
+function a() {
   item.style.backgroundColor = escolhido.style.backgroundColor
 }
 
-function b(){
+function b() {
   item.style.backgroundColor = '#f0f0f0'
 }
 
+let index = 0;
+
 template.querySelectorAll('div')
-  .forEach((item) => {
+  .forEach(() => {
     array[index] ? a() : b();
-    index++;
+    index += 1;
   });
 
 paleta.forEach((elem) => {
@@ -108,10 +109,10 @@ paleta.forEach((elem) => {
 });
 
 
-inputBtn.addEventListener('click', (e) => {
-  if (input.value != NaN && input.value > 0) {
+inputBtn.addEventListener('click', () => {
+  if (isNaN(input.value) && input.value > 0) {
     deleteTemplate();
-    criarTemplate(parseInt(input.value));
+    criarTemplate(parseInt(input.value, 10));
   }
 });
 
