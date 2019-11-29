@@ -20,8 +20,8 @@ containerPaleta.querySelectorAll('div').forEach(paletaLoop);
 /* Pintando as caixas */
 
 function trocaClassCaixa(event) {
-  event.target.className = `pixels ${corAtual}`;
-  console.log(event);
+  evento = event;
+  evento.target.className = `pixels ${corAtual}`;
 }
 
 function pintarCaixa(itemPixels) {
