@@ -29,6 +29,7 @@ telaCor.forEach(elemento => {
 })
 
 paletaApagaAtual.onclick = () => {
+  corAtual = 'black'
   trocarCor(paletaAtual, 'black')
   trocarCorArray(telaCor, 'white')
 }
