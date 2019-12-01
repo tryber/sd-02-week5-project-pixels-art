@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: blocos;
+  src: url('./fonts/Blox2.ttf');
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  background-image: url('./images/pixelsbackground.jpg ');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-size: 100%;
+}
+
+header {
+  float: right;
+  border: 2px solid blue;
+  position: relative;
+  padding: 50px 100px;
+  margin: 75px 250px 10px;
+}
+
+
+header h1 {
+
+  font-size: 120px;
+  font-family: blocos, sans-serif;
+  color: purple;
+}
+
+ul li li li li li {
+  background-color: black;
+}
+
+aside {
+  border: 2px solid red;
+  float: left;
+  margin-top: 50px;
+  margin: 50px 0px 0px 500px;
+}
+
+aside h1 {
+  border: 2px solid purple;
+}
+
+ul {
+  float: right;
+  list-style-type: none;
+}
+
+li {
+  border: 2px solid yellow;
+  width: 40px;
+  height: 40px;
+}
+
+footer {
+  background-color: white;
+  text-align: center;
+  color:black;
+  font-size: 2em;
+}
