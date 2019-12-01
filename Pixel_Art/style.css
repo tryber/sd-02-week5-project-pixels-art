@@ -18,6 +18,7 @@ body {
   background-attachment: fixed;
   background-clip: border-box;
   background-size: 100%;
+  border: 20px groove blue;
 }
 
 header {
@@ -36,30 +37,61 @@ header h1 {
   color: purple;
 }
 
-ul li li li li li {
-  background-color: black;
-}
 
 aside {
   border: 2px solid red;
   float: left;
   margin-top: 50px;
-  margin: 50px 0px 0px 500px;
+  margin: 50px 0px 100px 300px;
+
 }
 
 aside h1 {
   border: 2px solid purple;
 }
 
-ul {
-  float: right;
-  list-style-type: none;
+aside p {
+    margin-bottom: 10px;
 }
 
-li {
+article h2 {
+    border: 2px solid yellow;
+    float: right;
+    margin: 10px 500px auto auto;
+    padding: 10px;
+    display: block;
+    font-size: 60px;
+}
+
+article{
+    align-items: center;
+}
+
+.paleta {
+  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 150px;
+}
+
+.paletaCor {
   border: 2px solid yellow;
   width: 40px;
   height: 40px;
+}
+.telaPintura {
+    float: right;
+    border: 10px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin-top: 100px;
+    margin-right: 700px;
+}
+.telaCor{
+    border: 2px solid yellow;
+    width: 40px;
+    height: 40px;
 }
 
 footer {
