@@ -1,0 +1,16 @@
+html,body,#canvas{
+  margin:0;
+  padding:0;
+}
+body {
+    overflow:hidden;
+}
+#input {
+  position: fixed;
+  color:white;
+  top:0;
+  left:10%;
+}
+#rows, #columns {
+  border: 1px solid red;
+}

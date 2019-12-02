@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <title>Color-picker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <canvas id="canv" height="200px" width="1000px"></canvas>
+  <div id="input">
+  <input type="number" min="1" max="20" id="rows" value="5">
+  <input type="number" min="2" max="80" id="columns" value="5">
+    <input type="color" id="color" value="#42b6f4">
+    <button id="startPainting" style="display:none;">Desenho inicial</button>
+    <button id="clear">Limpar</button>
+  </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
