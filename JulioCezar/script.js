@@ -1,8 +1,9 @@
 window.onload = function () {
+  RandomColors ();
   document.getElementById('div_container').style.gridTemplateColumns = ' 40px 40px 40px 40px 40px';
   document.getElementById('div_container').style.gridTemplateRows = ' 40px 40px 40px 40px 40px';
   document.querySelector('h1').style.color = 'black';
-  const colorsDivs = document.getElementsByClassName('div_color_pallet');
+  document.getElementsByClassName('div_color_pallet')[0].style.backgroundColor = 'black';  
   const div_color1 = document.querySelector('#black');
   div_color1.addEventListener("mouseup", mouseUp);
   const div_color2 = document.getElementById('green');
@@ -18,6 +19,8 @@ window.onload = function () {
   input_size_grid.addEventListener('click', tamanhoGrid);
   const button_color =  document.getElementById('button_color');
   button_color.addEventListener('click', RandomColors);
+  const button_random_pixels = document.getElementById('button_random_pixels');
+  button_random_pixels.addEventListener('click', RandomColorPixels)
 }
 
 function tamanhoGrid() {
@@ -49,6 +52,17 @@ function tamanhoGrid() {
     }
     for (let i = PixelsQueSeraoRemovidos; i > 0; i -= 1) {
       list.removeChild(list.childNodes[list.childNodes.length - 1]);
+    }
+  }
+}
+
+function RandomColorPixels() {
+  const targetColor = document.querySelector('h1').style.color;
+  const tamanhoPixels = document.getElementsByClassName('pixels').length;
+  for (i = 0; i < tamanhoPixels; i += 1) {
+    const tamanhoRandom = Math.floor(Math.random() * tamanhoPixels);
+    if ( tamanhoRandom < (tamanhoPixels / 3)) {
+      document.getElementsByClassName('pixels')[i].style.backgroundColor = targetColor;
     }
   }
 }
