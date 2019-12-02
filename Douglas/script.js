@@ -1,5 +1,3 @@
-/*global document:true*/
-/*global someFunction event:true*/
 const escolha = document.getElementById('cor');
 const localClicado = document.querySelector ('.colorir');
 const tbody= document.getElementsByTagName ('tbody');
@@ -90,17 +88,23 @@ selecionaCor.addEventListener ('mouseup', function () {
   cor = qualACor();
   escolha.style.backgroundColor= cor;
 });
+selecionaCor.addEventListener('dblclick', function(){
+  event.target.style.backgroundColor='white';
+});
 window.onload= function(){
   this.trocaCor();
 }
 function trocaCor(){
   const cores = [];
-  cores[0] = document.getElementById('preto');
-  cores[1] = document.getElementById('azul');
-  cores[2] = document.getElementById('amarelo');
-  cores[3] = document.getElementById('rosa');
-  cores[4] = document.getElementById('verde');
-  cores[5] = document.getElementById('branco');
+  cores[0] = document.getElementById('cor1');
+  cores[1] = document.getElementById('cor2');
+  cores[2] = document.getElementById('cor3');
+  cores[3] = document.getElementById('cor4');
+  cores[4] = document.getElementById('cor5');
+  cores[5] = document.getElementById('cor6');
+  cores[6] = document.getElementById('cor7');
+  cores[7] = document.getElementById('cor8');
+
   for(let i = 0 ; i <= 5 ; i++ ){
     guardaCor[i]= geraCor();
     cores[i].style.backgroundColor= guardaCor[i];
@@ -118,18 +122,22 @@ function geraCor(){
 
 function qualACor () {
   switch (event.target.id){
-    case 'preto':
+    case 'cor1':
       return guardaCor[0];
-    case 'azul':
+    case 'cor2':
       return guardaCor[1];
-    case 'amarelo':
+    case 'cor3':
       return guardaCor[2];
-    case 'rosa':
+    case 'cor4':
       return guardaCor[3];
-    case 'verde':
+    case 'cor5':
       return guardaCor[4];
-    case 'branco':
+    case 'cor6':
       return guardaCor[5];
+    case 'cor7':
+      return 'white';
+    case 'cor8':
+      return 'black';
     default:
       return 'black';
   }

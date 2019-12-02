@@ -1,3 +1,7 @@
+body{
+  background-color: rgba(199, 177, 177, 0.397);
+}
+
 h1{
   text-align: center;
 }
@@ -56,26 +60,6 @@ td {
   margin: auto;
 }
 
-#preto {
+#cor8 {
   background-color: black;
-}
-
-#azul {
-  background-color: blue;
-}
-
-#amarelo {
-  background-color: yellow;
-}
-
-#rosa {
-  background-color: pink;
-}
-
-#verde{
-  background-color: green;
-}
-
-#branco{
-  background-color: white;
 }
