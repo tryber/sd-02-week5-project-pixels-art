@@ -1,4 +1,6 @@
 window.onload = function () {
+  document.getElementById('div_container').style.gridTemplateColumns = ' 40px 40px 40px 40px 40px';
+  document.getElementById('div_container').style.gridTemplateRows = ' 40px 40px 40px 40px 40px';
   document.querySelector('h1').style.color = 'black';
   const colorsDivs = document.getElementsByClassName('div_color_pallet');
   const div_color1 = document.querySelector('#black');
@@ -12,6 +14,41 @@ window.onload = function () {
   document.querySelector('.grid_container').addEventListener("click", pixel);
   const button_reset =  document.getElementById('button_reset');
   button_reset.addEventListener('click', reset);
+  const input_size_grid = document.getElementById('input_grid_size');
+  input_size_grid.addEventListener('click', tamanhoGrid);
+}
+
+function tamanhoGrid() {
+  const tamanhoGridFuturo = event.target.value;
+  let linhas = document.getElementById('div_container').style.gridTemplateRows;
+  const tamanhoGridPresente = (linhas.length + 1)/5;
+  let colunas = document.getElementById('div_container').style.gridTemplateColumns;
+  const PixelsNumberPresente = Math.pow(tamanhoGridPresente, 2);
+  const PixelsNumberFuturo = Math.pow(tamanhoGridFuturo, 2);
+  const PixelsQueSeraoAdd = PixelsNumberFuturo - PixelsNumberPresente;
+  const PixelsQueSeraoRemovidos = PixelsNumberPresente - PixelsNumberFuturo;
+  if (tamanhoGridFuturo > tamanhoGridPresente) {    
+    for (let i = 0; i < tamanhoGridFuturo - tamanhoGridPresente; i += 1 ) {
+      document.getElementById('div_container').style.gridTemplateColumns = document.getElementById('div_container').style.gridTemplateColumns + ' 40px';
+      document.getElementById('div_container').style.gridTemplateRows = document.getElementById('div_container').style.gridTemplateRows + ' 40px';
+    }
+    for (let i = 0; i < PixelsQueSeraoAdd; i += 1) {
+      const div = document.createElement('div');
+      div.className = 'pixels';
+      document.getElementById('div_container').appendChild(div);
+    }
+  } else if (tamanhoGridFuturo < tamanhoGridPresente) {
+    const list = document.getElementById('div_container');
+    for (let i = 1; i <= tamanhoGridPresente - tamanhoGridFuturo; i += 1) {
+      linhas = linhas.slice(0, linhas.length - 5);
+      colunas = colunas.slice(0, colunas.length - 5);          
+      document.getElementById('div_container').style.gridTemplateRows = linhas;
+      document.getElementById('div_container').style.gridTemplateColumns = colunas;
+    }
+    for (let i = PixelsQueSeraoRemovidos; i > 0; i -= 1) {
+      list.removeChild(list.childNodes[list.childNodes.length - 1]);
+    }
+  }
 }
 
 function pixel (event) {  

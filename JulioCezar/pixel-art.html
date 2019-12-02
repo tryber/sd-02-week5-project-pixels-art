@@ -14,10 +14,11 @@
     <div class="div_color_pallet" id="purple"></div>
   </section>
   <form>
+    <span>Tamanho em pixels do quadrado: </span><input type="number" id="input_grid_size" max="25" min="5">
     <button type="button" class="btn" id="button_reset">Limpar Quadrado</button>
   </form>
   <table>
-      <div class="grid_container">
+      <div id="div_container" class="grid_container">
         <div class="pixels"></div>
         <div class="pixels"></div>
         <div class="pixels"></div>
@@ -42,7 +43,7 @@
         <div class="pixels"></div>
         <div class="pixels"></div>
         <div class="pixels"></div>
-        <div class="pixels"></div>        
+        <div class="pixels"></div>               
     </div>
   </table>    
   <script src="script.js"></script>

@@ -30,7 +30,7 @@ body {
     width: 200px;
     height: 200px;    
     grid-template-columns: 40px 40px 40px 40px 40px;
-    grid-template-rows: 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px 40px 40px;   
     display: grid;
 }
 
@@ -47,6 +47,6 @@ body {
     cursor: pointer;
 }
 form {
-  width: 137px;   
+  width: 300px;   
   margin-left: 300px;  
 }
