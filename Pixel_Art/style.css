@@ -76,6 +76,7 @@ article h2 {
   height: 40px;
   margin: 2px;
   padding: 3px;
+  border-radius: 50%;
 }
 
 .paletaAtual{
@@ -90,6 +91,7 @@ article h2 {
   height: 40px;
   margin: 2px;
   padding: 3px;
+  border-radius: 50%;
 }
 
 .telaPintura {
