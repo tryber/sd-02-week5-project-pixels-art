@@ -16,6 +16,8 @@ window.onload = function () {
   button_reset.addEventListener('click', reset);
   const input_size_grid = document.getElementById('input_grid_size');
   input_size_grid.addEventListener('click', tamanhoGrid);
+  const button_color =  document.getElementById('button_color');
+  button_color.addEventListener('click', RandomColors);
 }
 
 function tamanhoGrid() {
@@ -51,13 +53,24 @@ function tamanhoGrid() {
   }
 }
 
+function RandomColors() {
+  for (let i = 1; i < 4; i += 1) {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i += 1) {
+    color += letters[Math.floor(Math.random() * 16)]
+    }    
+    document.getElementsByClassName('div_color_pallet')[i].style.backgroundColor = color;
+  }  
+}
+
 function pixel (event) {  
   let targetColor = document.querySelector('h1').style.color;
   event.target.style.backgroundColor = targetColor;
 }
 
 function mouseUp (event) {
-  let targetColor = event.target.id;
+  let targetColor = event.target.style.backgroundColor;
   document.querySelector('h1').style.color = targetColor;  
 }
 
