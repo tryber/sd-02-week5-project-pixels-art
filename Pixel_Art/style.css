@@ -38,10 +38,9 @@ header h1 {
 
 aside {
   border: 2px solid transparent;
-  float: left;
   width: 30%;
   text-align: center;
-
+  margin: 0 auto;
 }
 
 aside h1 {
@@ -54,8 +53,8 @@ aside p {
     font-size: 50px;
 }
 article {
-    float: left;
     width: 50%;
+    margin: 0 auto;
 }
 article h2 {
     border: 2px solid transparent;
