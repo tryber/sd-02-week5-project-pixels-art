@@ -1,1 +1,1 @@
-the quick brown fox jumped over the lazy dog
+Você pode acessar esse projeto ONLINE pelo link: https://giorgialeoniadev.github.io/projetos/pixel-art/
