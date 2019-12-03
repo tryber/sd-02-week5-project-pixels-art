@@ -1,7 +1,7 @@
 // Variáveis
 const quadrados = document.getElementsByTagName('td');
 let corSelecionada = 'black';
-const botaoLimpa = document.querySelector('button')
+const botaoLimpa = document.querySelector('button');
 
 function iniciar() {
     const colors = document.getElementsByClassName("cores");
@@ -12,7 +12,6 @@ function iniciar() {
         const corDaPaletaSelecionada = window
           .getComputedStyle(paletaSelecionada)
           .getPropertyValue("background-color");
-  
         corSelecionada = corDaPaletaSelecionada;
         corShow.style.background = corDaPaletaSelecionada;
       });
