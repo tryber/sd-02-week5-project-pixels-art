@@ -1,0 +1,33 @@
+* {
+  font-family: Ubuntu , sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.paleta {
+  margin: 10px 0 20px;
+}
+
+.quadradoPaleta {
+  width: 40px;
+  height: 40px;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  display: inline-block;
+}
+
+.quadro {
+  margin: -5px;
+  display: inline-flex;
+}
+
+.quadradoLinha {
+  width: 40px;
+  height: 40px;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  display: inline-flex;
+}
