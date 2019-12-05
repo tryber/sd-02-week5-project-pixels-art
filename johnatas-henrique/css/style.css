@@ -25,19 +25,13 @@ header {
   text-align: center;
 }
 
-aside {
-  float: left;
-  margin: 5%;
-  width: 25%;
-}
-
 .clear {
   clear: both;
 }
 
 .titulo-header {
   font-size: 3em;
-  margin-top: 15px;
+  margin: 15px 0 20px;
   -webkit-text-stroke: 2px black;
   -webkit-text-fill-color: white;
 }
@@ -51,9 +45,10 @@ aside {
 }
 
 .grid-paleta {
-  display: inline-grid;
-  grid-template-columns: repeat( 2 , auto );
-  grid-column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat( 12 , auto );
+  width: 90%;
+  margin: 0 auto;
 }
 
 .grid-paleta h3 {
@@ -88,14 +83,14 @@ aside {
 }
 
 .container-pixels {
-  float: left;
-  margin: 5% 0 0 5%;
+  margin: 50px auto 20px;
   width: 60%;
 }
 
+.mg-central{
+  text-align: center;
+}
 .conjunto-pixels {
-  grid-area: caixa;
-  margin-top: 35px;
   display: inline-grid;
   grid-template-columns: repeat( 5 , auto );
 }
