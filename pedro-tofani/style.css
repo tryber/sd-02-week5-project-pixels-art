@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(226, 215, 215);
+}
+
+header {
+    text-align: center;
+}
+
+.bigBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.colorivel {
+    margin: 0px;
+    padding: 0px;
+    border: solid black 1px;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+}
+
+#coresSelecionaveis {
+    display: inline-flex;
+}
+
+#black {
+    height: 50px;
+    background-color: black;
+    width: 50px;
+    margin: 10px;
+    border: solid red;
+}
+
+#cor1 {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border: solid white;
+}
+
+#cor2 {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border: solid white;
+}
+
+#cor3 {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border: solid white;
+}
+
+#conteudo {
+    text-align: center;
+}
+
+#bordaMatriz {
+    margin: 5px;
+    height: 200px;
+    width: 200px;
+    padding: 0px;
+    grid-template-columns: 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+    display: grid;
+    justify-content: center;
+}
