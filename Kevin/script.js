@@ -64,6 +64,9 @@ function createMatriz(size) {
     if (size < 5) {
         size = 5;
         alert("Apenas 5 pra cima")
+    } else if (size > 50) {
+        size = 50;
+        alert("Apenas 50 para baixo")
     }
     for (line = 0; line < size; line++) {
         let linha = document.createElement("tr")
