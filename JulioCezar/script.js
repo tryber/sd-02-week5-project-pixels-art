@@ -24,33 +24,39 @@ window.onload = function () {
 }
 
 function tamanhoGrid() {
-  const tamanhoGridFuturo = event.target.value;
-  let linhas = document.getElementById('div_container').style.gridTemplateRows;
-  const tamanhoGridPresente = (linhas.length + 1)/5;
-  let colunas = document.getElementById('div_container').style.gridTemplateColumns;
-  const PixelsNumberPresente = Math.pow(tamanhoGridPresente, 2);
-  const PixelsNumberFuturo = Math.pow(tamanhoGridFuturo, 2);
-  const PixelsQueSeraoAdd = PixelsNumberFuturo - PixelsNumberPresente;
-  const PixelsQueSeraoRemovidos = PixelsNumberPresente - PixelsNumberFuturo;
-  if (tamanhoGridFuturo > tamanhoGridPresente) {    
-    for (let i = 0; i < tamanhoGridFuturo - tamanhoGridPresente; i += 1 ) {
+  const tamanhoGridFuturo = event.target.value; //tamanho do grid que o usuario quer
+  let linhas = document.getElementById('div_container').style.gridTemplateRows; //linhas = gridTemplateRows do grid = string: ' 40px 40px...'
+  const tamanhoGridPresente = (linhas.length + 1)/5; //Tamanho da string linhas(29) + 1 (para arredondar) /5 (pq o tamanho padrao é 5)
+  let colunas = document.getElementById('div_container').style.gridTemplateColumns; //colunas = gridTemplateColums do grid = string: ' 40px 40px...'
+  const PixelsNumberPresente = Math.pow(tamanhoGridPresente, 2); //tamanho do grid atual elevado a 2 para achar qtos pixels ele tem
+  const PixelsNumberFuturo = Math.pow(tamanhoGridFuturo, 2); //tamanho do grid do usuario elevado a 2 para achar qtos pixels ele vai ter
+  const PixelsQueSeraoAdd = PixelsNumberFuturo - PixelsNumberPresente; //subtracao do numero de pixels que o usuario quer pelos atuais para saber qtos serao adicionados
+  const PixelsQueSeraoRemovidos = PixelsNumberPresente - PixelsNumberFuturo; //subtracao do numero de pixels atuais pelos que o usuario quer para saber qtos serao subtraidos
+  if (tamanhoGridFuturo > tamanhoGridPresente) {   //if ira executar se tamanho do usuario for maior que tamanho atual 
+    for (let i = 0; i < tamanhoGridFuturo - tamanhoGridPresente; i += 1 ) { //for executar de 0 até o tamanho do grid - 1 pq é  <
+      //tamanho grid futuro - tamanho grid presente siginifica qtas linhas / colunas deverao ser acrescidas ao grid
+      //as linhas 39 e 40 vao pegar o tamanho da coluna e da linha e adicionar 'i' templates de 40px de tamanho para cada um.
       document.getElementById('div_container').style.gridTemplateColumns = document.getElementById('div_container').style.gridTemplateColumns + ' 40px';
       document.getElementById('div_container').style.gridTemplateRows = document.getElementById('div_container').style.gridTemplateRows + ' 40px';
     }
-    for (let i = 0; i < PixelsQueSeraoAdd; i += 1) {
+    for (let i = 0; i < PixelsQueSeraoAdd; i += 1) { //for executar de 0 até numero de pixers que serão adicionados - 1 pq é  <
+      //Cria o elemento div, atribui a classe pixels a ele e adiciona no elemento div_container(grid)
       const div = document.createElement('div');
       div.className = 'pixels';
       document.getElementById('div_container').appendChild(div);
     }
-  } else if (tamanhoGridFuturo < tamanhoGridPresente) {
-    const list = document.getElementById('div_container');
-    for (let i = 1; i <= tamanhoGridPresente - tamanhoGridFuturo; i += 1) {
+  } else if (tamanhoGridFuturo < tamanhoGridPresente) { //ira executar se o tamanho do usuario for menor que o tamanho atual
+    const list = document.getElementById('div_container'); //atribui a list o valor de div_container(grid)
+    for (let i = 1; i <= tamanhoGridPresente - tamanhoGridFuturo; i += 1) { //for executar de 1 até o tamanho do grid
+      // tamanho grid presente - futuro siginifica qtas linhas/colunas serao subtraidas
+      //a cada iteracao do for eu retiro do template de rows e columns 5 espacos ( 40px) e atribuo ao valor do grid
       linhas = linhas.slice(0, linhas.length - 5);
       colunas = colunas.slice(0, colunas.length - 5);          
       document.getElementById('div_container').style.gridTemplateRows = linhas;
       document.getElementById('div_container').style.gridTemplateColumns = colunas;
     }
     for (let i = PixelsQueSeraoRemovidos; i > 0; i -= 1) {
+      //esse for sera feito para remover quantos pixels forem necessarios para adequar ao grid do usuario 
       list.removeChild(list.childNodes[list.childNodes.length - 1]);
     }
   }

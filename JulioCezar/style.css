@@ -1,6 +1,12 @@
 body {
+    background-color: rgb(125, 216, 246);
     margin: 0;
     padding: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#section1_container {
+    margin-left: 20%;
 }
 
 .div_color_pallet {
@@ -26,19 +32,30 @@ body {
     background-color: purple;
 }
 
-.grid_container {    
+.grid_container { 
+    margin-left: 20%;
+    margin-top: 40px; 
     width: 200px;
     height: 200px;    
     grid-template-columns: 40px 40px 40px 40px 40px;
     grid-template-rows: 40px 40px 40px 40px 40px;   
-    display: grid;
+    display: grid;   
+}
+
+#tamanho_texto {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .pixels {
+    width: 40px;
+    height: 40px;
+    background-color: white;
     border: 1px solid;    
 }
 
 .btn {
+    margin-top: 20px;
     background-color: DodgerBlue;
     border: none;
     color: white;
@@ -47,6 +64,7 @@ body {
     cursor: pointer;
 }
 form {
-  width: 300px;   
-  margin-left: 300px;  
+  padding-top: 50px;
+  width: 400px;   
+  margin-left: 20%;  
 }
