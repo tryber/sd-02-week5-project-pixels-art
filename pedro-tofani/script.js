@@ -33,8 +33,8 @@ for (let i = 0; i < 4; i++) {
 }
 document.querySelector('#bordaMatriz').addEventListener('click', colorir);
 document.getElementById('clear').addEventListener('click', clear);
-document.getElementById('tamanho').addEventListener('change', clear);
-document.getElementById('tamanho').addEventListener('change', mudarTamanho);
+document.getElementById('gerarQuadro').addEventListener('click', clear);
+document.getElementById('gerarQuadro').addEventListener('click', mudarTamanho);
 document.getElementById('gitHub').addEventListener('click', gitHub);
 document.getElementById('trybe').addEventListener('click', trybe);
 
@@ -49,19 +49,22 @@ function clear() {
     }
 }
 function mudarTamanho() {
-    let valorComprimento = this.value;
-    grid.innerHTML = '';
-    grid.style.width = valorComprimento * 40;
-    grid.style.height = valorComprimento * 40;
-    grid.style.gridTemplateColumns = '';
-    grid.style.gridTemplateRows = '';
-    for (let i = 0; i < valorComprimento; i++) {
-        grid.style.gridTemplateColumns += ' 40px';
-        grid.style.gridTemplateRows += ' 40px';
-        for (let j = 0; j < valorComprimento; j++) {
-            let quadradinho = document.createElement("div");
-            quadradinho.className = 'colorivel';
-            document.getElementById("bordaMatriz").appendChild(quadradinho);
+    let valorComprimento = document.getElementById('tamanho').value;
+    if (valorComprimento > 50 || valorComprimento < 1) alert('valor entre 1 e 50')
+    else {
+        grid.innerHTML = '';
+        grid.style.width = valorComprimento * 40;
+        grid.style.height = valorComprimento * 40;
+        grid.style.gridTemplateColumns = '';
+        grid.style.gridTemplateRows = '';
+        for (let i = 0; i < valorComprimento; i++) {
+            grid.style.gridTemplateColumns += ' 40px';
+            grid.style.gridTemplateRows += ' 40px';
+            for (let j = 0; j < valorComprimento; j++) {
+                let quadradinho = document.createElement("div");
+                quadradinho.className = 'colorivel';
+                document.getElementById("bordaMatriz").appendChild(quadradinho);
+            }
         }
     }
 }
