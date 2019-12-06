@@ -87,9 +87,10 @@ header {
   width: 60%;
 }
 
-.mg-central{
+.mg-central {
   text-align: center;
 }
+
 .conjunto-pixels {
   display: inline-grid;
   grid-template-columns: repeat( 5 , auto );
