@@ -1,7 +1,6 @@
 const template = document.querySelector('.grid1');
 const random = document.querySelectorAll('.random');
 const black = document.querySelector('.black');
-const white = document.querySelector('.white');
 const escolhido = document.querySelector('.escolhido');
 const clearBtn = document.querySelector('.clear');
 const input = document.querySelector('input[type=text]');
@@ -10,7 +9,6 @@ const identicons = document.querySelectorAll('.identicons img');
 
 const paleta = [];
 
-paleta.push(white);
 paleta.push(black);
 
 random.forEach((elem) => {
@@ -23,6 +21,8 @@ clearBtn.addEventListener('click', () => {
     elemento.style.backgroundColor = 'rgb(255,255,255)';
   });
 });
+
+escolhido.style.backgroundColor = 'black';
 
 
 function criarTemplate(N) {
@@ -55,7 +55,6 @@ function criarCores() {
     elem.style.backgroundColor = bgColor;
   });
 
-  white.style.backgroundColor = 'rgb(255, 255, 255)';
   black.style.backgroundColor = 'rgb(0, 0, 0)';
 }
 
@@ -79,6 +78,7 @@ function gerarIdenticon(array) {
     index += 1;
   });
 }
+
 
 function gerarIdentions() {
   const identicon1 = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0];
@@ -112,7 +112,7 @@ paleta.forEach((elem) => {
 
 
 inputBtn.addEventListener('click', () => {
-  if (isNaN(input.value) && input.value > 0) {
+  if (!isNaN(input.value) && input.value > 0) {
     deleteTemplate();
     criarTemplate(parseInt(input.value, 10));
   }
