@@ -66,8 +66,9 @@ article h2 {
 .paleta {
   max-width: 150px;
   display: grid;
-  grid-template-columns: repeat( 3 , auto );
+  grid-template-columns: repeat( 2 , auto );
   margin: 0 auto;
+  justify-content: center;
 }
 
 .paletaCor {
@@ -95,7 +96,7 @@ article h2 {
 }
 
 .telaPintura {
-    max-width: 300px;
+    max-width: fit-content;
     margin: 50px auto;
     display: grid;
   grid-template-columns: repeat( 5 , auto );
@@ -134,11 +135,9 @@ article h2 {
 }
 
 .telaCor{
-    border: 2px solid black;
+    border: 1px solid black;
     width: 40px;
     height: 40px;
-    margin: 3px;
-    padding: 3px;
 }
 
 .white {
