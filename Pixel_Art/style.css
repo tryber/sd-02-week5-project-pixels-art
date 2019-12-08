@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: blocos;
+  src: url('./fonts/Blox2.ttf');
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  background-image: url('./images/pixelsbackground.jpg ');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-size: 100%;
+  border: 20px groove blue;
+}
+
+header {
+  float: right;
+  padding: 50px 100px;
+  margin: 75px 250px 10px;
+}
+
+
+header h1 {
+
+  font-size: 120px;
+  font-family: blocos, sans-serif;
+  color: purple;
+}
+
+
+aside {
+  border: 2px solid transparent;
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+aside h1 {
+  border: 2px solid transparent;
+  font-size: 60px;
+}
+
+aside p {
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+article {
+    width: 50%;
+    margin: 0 auto;
+}
+article h2 {
+    border: 2px solid transparent;
+    font-size: 60px;
+    text-align: center;
+}
+
+
+.paleta {
+  max-width: 150px;
+  display: grid;
+  grid-template-columns: repeat( 2 , auto );
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.paletaCor {
+  border: 2px solid black;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.paletaAtual{
+  margin: 0 auto;
+  max-width: 50px;
+}
+
+
+.paletaCorAtual {
+  border: 2px solid black;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.telaPintura {
+    max-width: fit-content;
+    margin: 50px auto;
+    display: grid;
+  grid-template-columns: repeat( 5 , auto );
+}
+.purple {
+    background-color: purple;
+}
+
+.green {
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.black {
+  background-color: black ;
+}
+
+.padrao {
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.telaCor{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
+
+.white {
+    background-color: white;
+}
+
+footer {
+  background-color: white;
+  text-align: center;
+  color:black;
+  font-size: 2em;
+}
+
+.paletaApagaAtual {
+  font-size: 2em;
+  margin-top: 10px;
+  background-color: greenyellow;
+  font-weight: bolder;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer; 
+}
