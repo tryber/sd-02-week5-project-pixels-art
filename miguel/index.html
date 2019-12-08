@@ -9,7 +9,7 @@
         <h1>Paleta de cores</h1>
 
         <table id="paleta">
-            <tr><td class="black"></td><td class="red"></td><td class="blue"></td><td class="green"></td></tr>
+            <tr><td class="black" id="black"></td><td class="red"></td><td class="blue"></td><td class="green"></td></tr>
         </table>
 
         <table id="quadro" cellspacing="0">
@@ -19,6 +19,13 @@
             <tr><td></td><td></td><td></td><td></td><td></td></tr>
             <tr><td></td><td></td><td></td><td></td><td></td></tr>
         </table>
+
+        <button id="limpar-quadro">Limpar quadro</button>
+
+        <div>
+            Digite um número entre 5 e 50 para alterar o número de linhas e colunas do quadro: <input type="text" maxlength="2">
+            <button id="alterar-numero">Alterar número</button>
+        </div>
 
         <script src="script.js"></script>
     </body>    
