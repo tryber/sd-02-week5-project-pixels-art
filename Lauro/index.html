@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8" />
+	<title>Paleta de Cores</title>
+</head>
+<body>
+<h1 style="text-align:center">Paleta de cores.</h1>
+<section id ='conteudo'>
+  <div class="quadrado" id="black" onclick ="guardaCor('black')"></div>
+  <div class="quadrado" id="blue" onclick ="guardaCor('blue')"></div>
+  <div class="quadrado" id="green" onclick ="guardaCor('green')"></div>
+  <div class="quadrado" id="red" onclick ="guardaCor('red')"></div>
+  <div class="quadrado" id="current-color">
+    <p><br><br><br>cor selecionada</p>
+  </div>
+  <table border="1" style="border-collapse:collapse;">
+    <tr class="1">
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+    </tr>
+    <tr class="2">
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+    </tr>
+    <tr class="3">
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+    </tr>
+    <tr class="4">
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+    </tr>
+    <tr class="5">
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+      <td class="quadrinho" onclick = "trocaCor(this)"></td>
+    </tr>
+  </table><br>
+  <button id="reset">Apagar tudo</button>
+</section>
+</body>
+<script src="script.js"></script>
+</html>

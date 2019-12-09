@@ -1,0 +1,42 @@
+#conteudo{
+  margin:auto;
+  width:20%;
+}
+.quadrado{
+	margin-bottom: 20px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #000;
+	display:inline-block;
+}
+.quadrinho{
+	width: 40px;
+	height: 40px;
+}
+td{
+	width: 40px;
+	height: 40px;
+}
+#black{
+background-color: black;
+}
+#green{
+background-color: green;
+}
+#red{
+background-color: red;
+}
+#blue{
+background-color: blue;
+}
+#current-color{
+  vertical-align: top;
+  font-size:10px;
+}
+table{
+  background-color: white;
+}
+#reset{
+  -webkit-appearence:button;
+  margin: auto;
+}
