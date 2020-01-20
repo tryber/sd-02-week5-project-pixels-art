@@ -1,0 +1,30 @@
+html,
+body,
+#canvas {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+#input {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    color: white;
+    top: 0;
+    left: 10%;
+    background-color: forestgreen;
+    padding: 10px;
+    border: gainsboro solid 2px;
+}
+
+#rows,
+#columns {
+    border: 1px solid red;
+}
